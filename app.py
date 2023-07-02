@@ -45,7 +45,7 @@ if botao and lista is not None:
         options = Options()
         options.add_argument("start-maximized")
 
-        navegador = get_driver()
+        navegador = get_driver('chromedriver')
         navegador.get("https://web.whatsapp.com")
     
         # esperar a tela do whatsapp carregar
