@@ -43,7 +43,6 @@ if botao and lista is not None:
             return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
         options = Options()
-        options.add_argument('--headless')
         options.add_argument("start-maximized")
 
         navegador = get_driver()
