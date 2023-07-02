@@ -12,7 +12,7 @@ from webdriver_manager.core.utils import ChromeType
 
 option = webdriver.ChromeOptions()
 option.add_argument("start-maximized")
-options.add_argument("--headless")
+option.add_argument("--headless")
 
 #from webdriver_manager.firefox import GeckoDriverManager
 
