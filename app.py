@@ -8,7 +8,10 @@ from openpyxl import Workbook
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.chrome.options import Options
 
 from webdriver_manager.core.utils import ChromeType
@@ -29,7 +32,9 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    navegador = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    #navegador = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+    navegador = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
 
     navegador.get("https://web.whatsapp.com")
 
