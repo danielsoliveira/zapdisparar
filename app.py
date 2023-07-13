@@ -29,7 +29,7 @@ botao = st.button('Enviar')
     
 if botao and lista is not None:
     
-    options = webdriver.Options()
+    options = Options()
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--no-sandbox')
     navegador = webdriver.Chrome('/chromedriver',chrome_options=chrome_options)
