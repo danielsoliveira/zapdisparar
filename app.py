@@ -30,7 +30,7 @@ botao = st.button('Enviar')
     
 if botao and lista is not None:
     
-    navegador = webdriver.Chrome(ChromeDriverManager(path = r"C:\\zapdisparar\\chromedriver.exe").install())
+    navegador = webdriver.Chrome(ChromeDriverManager(path = r"C:\\zapdisparar\\chromedriver.exe"))
 
     navegador.get("https://web.whatsapp.com")
 
