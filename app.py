@@ -29,9 +29,8 @@ botao = st.button('Enviar')
     
 if botao and lista is not None:
     
-    options = Options()
-    
-    navegador = webdriver.Chrome(executable_path='/chromedriver')
+    servico = Service(ChromeDriverManager().install())
+    navegador = webdriver.Chrome(service=servico)
 
     navegador.get("https://web.whatsapp.com")
 
