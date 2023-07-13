@@ -27,9 +27,8 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    servico = Service(ChromeDriverManager().install())
-
-    navegador = webdriver.Chrome(service=servico)
+    
+    navegador = webdriver.Chrome(executable_path="chromedriver.exe")
     navegador.get("https://web.whatsapp.com")
 
     # esperar a tela do whatsapp carregar
@@ -63,7 +62,7 @@ if botao and lista is not None:
             navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
             
             if imagem != "N":
-                caminho_completo = os.path.abspath(f"arquivos/{imagem}")
+                caminho_completo = os.path.abspath(f"C:\zapdisparar\arquivos\{imagem}")
                 navegador.find_element(By.XPATH, 
                                     '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/div/span').click()
                 navegador.find_element(By.XPATH, 
