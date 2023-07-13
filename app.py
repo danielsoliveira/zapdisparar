@@ -29,7 +29,7 @@ botao = st.button('Enviar')
 if botao and lista is not None:
     service = Service(executable_path="C:\zapdisparar\chromedriver.exe")
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless=new')
+    options.add_argument('--headless=old')
     navegador = webdriver.Chrome(service=service, options=options)
 
     navegador.get("https://web.whatsapp.com")
