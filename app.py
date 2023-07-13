@@ -27,7 +27,7 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    service = Service(ChromeDriverManager(executable_path="./chromedriver").install())
+    service = Service(ChromeDriverManager(executable_path="/appuser/local/bin/chromedriver"))
     options = webdriver.ChromeOptions()
     navegador = webdriver.Chrome(service=service, options=options)
 
