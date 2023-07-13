@@ -30,9 +30,7 @@ botao = st.button('Enviar')
 if botao and lista is not None:
     
     options = Options()
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--no-sandbox')
-    options.add_argument('start-maximized')
+    
     navegador = webdriver.Chrome('/chromedriver',options=options)
 
     navegador.get("https://web.whatsapp.com")
