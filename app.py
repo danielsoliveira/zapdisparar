@@ -10,10 +10,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from webdriver_manager.core.utils import ChromeType
 
-option = webdriver.ChromeOptions()
-option.add_argument("start-maximized")
-option.add_argument("--headless")
-
 #from webdriver_manager.firefox import GeckoDriverManager
 
 from selenium.webdriver.common.keys import Keys
@@ -39,10 +35,12 @@ if botao and lista is not None:
         from webdriver_manager.chrome import ChromeDriverManager
     
         def get_driver():
-            return webdriver.Chrome(executable_path=r'./chromedriver', options=options)
+            return webdriver.Chrome(executable_path=r".\chromedriver.exe", options=options)
 
         options = Options()
         options.add_argument("start-maximized")
+        option = webdriver.ChromeOptions()
+        option.add_argument("--headless")
 
         navegador = get_driver()
         navegador.get("https://web.whatsapp.com")
