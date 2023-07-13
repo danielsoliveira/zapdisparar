@@ -39,7 +39,7 @@ if botao and lista is not None:
         from webdriver_manager.chrome import ChromeDriverManager
     
         def get_driver():
-            return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            return webdriver.Chrome(executable_path=r'./chromedriver', options=options)
 
         options = Options()
         options.add_argument("start-maximized")
