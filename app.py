@@ -27,8 +27,11 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    
-    navegador = webdriver.Chrome(executable_path="C:\zapdisparar\chromedriver.exe")
+    service = Service(executable_path="C:\zapdisparar\chromedriver.exe")
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless=new')
+    navegador = webdriver.Chrome(service=service, options=options)
+
     navegador.get("https://web.whatsapp.com")
 
     # esperar a tela do whatsapp carregar
