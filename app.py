@@ -7,12 +7,11 @@ import pandas as pd
 from openpyxl import Workbook
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 from webdriver_manager.core.utils import ChromeType
-
-#from webdriver_manager.firefox import GeckoDriverManager
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -31,7 +30,7 @@ botao = st.button('Enviar')
     
 if botao and lista is not None:
 
-    navegador = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+    navegador = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
     navegador.get("https://web.whatsapp.com")
 
