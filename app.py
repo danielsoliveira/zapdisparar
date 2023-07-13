@@ -79,7 +79,7 @@ if botao and lista is not None:
                 navegador.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
                 
                 if imagem != "N":
-                    caminho_completo = os.path.abspath(f"C:/docs/{imagem}")
+                    caminho_completo = os.path.abspath(f"C:/zapdisparar/arquivos/{imagem}")
                     navegador.find_element(By.XPATH, 
                                         '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/div/span').click()
                     navegador.find_element(By.XPATH, 
@@ -89,16 +89,5 @@ if botao and lista is not None:
                                         '//*[@id="app"]/div/div/div[3]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div/div/span').click()
                 
                     time.sleep(1)
-                
-                if arquivo != "N":
-                    caminho_completo = os.path.abspath(f"C:/docs/{arquivo}")
-                    navegador.find_element(By.XPATH,
-                                        '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/div/span').click()
-                    navegador.find_element(By.XPATH, 
-                                        '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[1]/div[2]/div/span/div/div/ul/li[4]/button/input').send_keys(caminho_completo)
-                    time.sleep(3)
-                    navegador.find_element(By.XPATH, 
-                                        '//*[@id="app"]/div/div/div[3]/div[2]/span/div/span/div/div/div[2]/div/div[2]/div[2]/div/div/span').click()
-                    
     
                 time.sleep(random.randrange(5,8))
