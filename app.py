@@ -10,6 +10,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
+from webdriver_manager.core.utils import ChromeType
+
 #from webdriver_manager.firefox import GeckoDriverManager
 
 from selenium.webdriver.common.keys import Keys
@@ -28,9 +30,8 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    
-    servico = Service(ChromeDriverManager().install())
-    navegador = webdriver.Chrome(service=servico)
+
+    navegador = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
     navegador.get("https://web.whatsapp.com")
 
