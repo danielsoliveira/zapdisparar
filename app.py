@@ -31,7 +31,7 @@ if botao and lista is not None:
     
     options = Options()
     
-    navegador = webdriver.Chrome('/chromedriver',options=options)
+    navegador = webdriver.Chrome('/chromedriver')
 
     navegador.get("https://web.whatsapp.com")
 
