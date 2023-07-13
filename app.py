@@ -8,6 +8,7 @@ from openpyxl import Workbook
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 #from webdriver_manager.firefox import GeckoDriverManager
 
@@ -28,7 +29,7 @@ botao = st.button('Enviar')
     
 if botao and lista is not None:
     
-    options = webdriver.ChromeOptions()
+    options = webdriver.Options()
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--no-sandbox')
     navegador = webdriver.Chrome('/chromedriver',chrome_options=chrome_options)
