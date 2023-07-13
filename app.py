@@ -32,7 +32,7 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-    navegador = webdriver.Chrome("chromedriver")
+    navegador = webdriver.Chrome('chromedriver')
 
     #navegador = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
 
