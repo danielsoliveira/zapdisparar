@@ -29,8 +29,8 @@ if lista is not None:
 botao = st.button('Enviar')
     
 if botao and lista is not None:
-
-    navegador = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+    
+    navegador = webdriver.Chrome(ChromeDriverManager(path = r"chromedriver.exe").install())
 
     navegador.get("https://web.whatsapp.com")
 
