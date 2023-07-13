@@ -1,4 +1,4 @@
-#!pip install selenium
+ecu#!pip install selenium
 #!pip install webdriver-manager
 #!pip install streamlit
 import streamlit as st
@@ -31,7 +31,7 @@ if botao and lista is not None:
     
     options = Options()
     
-    navegador = webdriver.Chrome('/chromedriver')
+    navegador = webdriver.Chrome(executable_path='/chromedriver')
 
     navegador.get("https://web.whatsapp.com")
 
